@@ -1,0 +1,123 @@
+/* Mobile navbar container */
+.mobile-nav {
+    position: fixed;
+    top: 32px;
+    left: 0;
+    right: 0;
+    height: 56px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    align-items: center;
+
+    padding: 0 8px;
+    background-color: #fff;
+    border-bottom: 1px solid #1f2937;
+    z-index: 1000;
+}
+
+/* Icon buttons */
+.nav-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.4rem;
+    color: #111827;      /* dark icons on white bg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center logo */
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 32px;
+    width: auto;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+    position: fixed;
+    top: 88px;              /* promo (32px) + navbar (56px) */
+    left: 0;
+    right: 0;
+
+    background-color: #252525;
+
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.25s ease-out;
+
+    z-index: 1200;
+}
+
+.mobile-menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #f9fafb;
+    font-size: 0.95rem;
+}
+
+/* When menu is open */
+.mobile-menu.open {
+    max-height: 300px;
+    border-bottom: 1px solid #fff;
+}
+
+
+@media (min-width: 1024px) {
+
+    /* Navbar becomes a single desktop bar */
+    .mobile-nav {
+        top: 32px;                        /* usually no promo bar on desktop, adjust if needed */
+        height: 72px;
+        padding: 0 40px;
+
+        display: grid;
+        grid-template-columns: auto 1fr auto; /* logo | links | cart */
+        align-items: center;
+        column-gap: 2rem;
+
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* Hide hamburger on desktop */
+    .nav-toggle {
+        display: none;
+    }
+
+    /* Desktop nav links inline in the middle */
+    .mobile-menu {
+        position: static;
+        max-height: none;
+        overflow: visible;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+    .mobile-menu a {
+        padding: 0;
+        font-size: 0.9rem;
+        color: #111827;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .mobile-menu a:hover {
+        text-decoration: underline;
+    }
+}

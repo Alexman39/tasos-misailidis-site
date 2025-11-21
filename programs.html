@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programs | Tasos Misailidis</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/programs.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a4df1a361f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- Promo Bar -->
+<div class="promo-bar">
+    Black Friday Sale – Up to 70% OFF!
+</div>
+
+<!-- Header -->
+<header class="mobile-nav">
+    <button class="nav-icon nav-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <a href="index.html" class="nav-logo">
+        <img src="IMAGES/logo.png" alt="Logo">
+    </a>
+
+    <nav class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="nav-icon nav-cart" aria-label="View cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </button>
+</header>
+
+<!-- ============================= -->
+<!--          PROGRAMS PAGE        -->
+<!-- ============================= -->
+
+<main class="programs-wrapper">
+
+    <section class="programs-header">
+        <div>
+            <h1 class="programs-title">Programs</h1>
+            <p class="programs-subtitle">
+                Evidence-based bodybuilding & fat loss programs designed by Tasos Misailidis.
+                Choose the one that matches your level, schedule, and goal.
+            </p>
+        </div>
+
+        <div class="programs-sort">
+            <label for="sort-by">Sort by:</label>
+            <select id="sort-by">
+                <option value="default">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="level">Difficulty</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="programs-section">
+        <div class="programs-grid" id="programs-grid">
+
+            <!-- Program 1 -->
+            <a href="program-5-day-hypertrophy.html"
+               class="program-link"
+               data-price="29.99"
+               data-level="beginner">
+                <article class="program-card">
+                    <div class="program-image"
+                         style="background-image: url('IMAGES/5dayHypertrophy.png');"></div>
+                    <div class="program-body">
+                        <h2 class="program-title">5-Day Hypertrophy Program</h2>
+                        <p class="program-meta">Beginner • 8 Weeks • 5 days/week</p>
+                        <p class="program-price">€29.99</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Program 2 -->
+            <a href="program-upper-lower.html"
+               class="program-link"
+               data-price="39.99"
+               data-level="intermediate">
+                <article class="program-card">
+                    <div class="program-image"
+                         style="background-image: url('IMAGES/upperLower.png');"></div>
+                    <div class="program-body">
+                        <h2 class="program-title">Upper Lower Program</h2>
+                        <p class="program-meta">Intermediate • 12 Weeks • 4 days/week</p>
+                        <p class="program-price">€39.99</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Program 3 -->
+            <a href="program-leg-power.html"
+               class="program-link"
+               data-price="24.99"
+               data-level="beginner">
+                <article class="program-card">
+                    <div class="program-image"
+                         style="background-image: url('IMAGES/legPower.png');"></div>
+                    <div class="program-body">
+                        <h2 class="program-title">Leg Power Program</h2>
+                        <p class="program-meta">Beginner • 6 Weeks • 3–4 days/week</p>
+                        <p class="program-price">€24.99</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Program 4 -->
+            <a href="program-glute-goddess.html"
+               class="program-link"
+               data-price="34.99"
+               data-level="intermediate">
+                <article class="program-card">
+                    <div class="program-image"
+                         style="background-image: url('IMAGES/gluteGoddess.png');"></div>
+                    <div class="program-body">
+                        <h2 class="program-title">Glute Goddess in 6 Weeks</h2>
+                        <p class="program-meta">Intermediate • 6 Weeks • 4 days/week</p>
+                        <p class="program-price">€34.99</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Program 5 -->
+            <a href="program-lean-toned.html"
+               class="program-link"
+               data-price="49.99"
+               data-level="advanced">
+                <article class="program-card">
+                    <div class="program-image"
+                         style="background-image: url('IMAGES/leanSculpt.png');"></div>
+                    <div class="program-body">
+                        <h2 class="program-title">Lean & Toned in 4 Weeks</h2>
+                        <p class="program-meta">Advanced • 4 Weeks • 6 days/week</p>
+                        <p class="program-price">€49.99</p>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Program 6 -->
+<!--            <a href="program-strength.html"-->
+<!--               class="program-link"-->
+<!--               data-price="59.99"-->
+<!--               data-level="mixed">-->
+<!--                <article class="program-card">-->
+<!--                    <div class="program-image"-->
+<!--                         style="background-image: url('#');"></div>-->
+<!--                    <div class="program-body">-->
+<!--                        <h2 class="program-title">Ultimate Bodybuilding Bundle</h2>-->
+<!--                        <p class="program-meta">Beginner → Advanced • All programs</p>-->
+<!--                        <p class="program-price">€59.99</p>-->
+<!--                    </div>-->
+<!--                </article>-->
+<!--            </a>-->
+
+        </div>
+    </section>
+
+
+</main>
+
+<!-- ============================= -->
+<!--              FOOTER           -->
+<!-- ============================= -->
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4 class="footer-heading">PROGRAMS</h4>
+                <a href="programs.html" class="footer-link">Training Programs</a>
+                <a href="coaching.html" class="footer-link">Online Coaching</a>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">SPONSORS</h4>
+                <a href="#" class="footer-link">Flexapil</a>
+                <a href="#" class="footer-link">Underarmour</a>
+                <a href="#" class="footer-link">Firtech</a>
+            </div>
+        </div>
+
+        <div class="footer-newsletter">
+            <h4 class="footer-heading">
+                GET MY ZERO FLUFF, 1 PARAGRAPH WEEKLY NEWSLETTER. FOR FREE!
+            </h4>
+
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Your Email Address" required />
+                <button type="submit" class="newsletter-button">SIGN UP</button>
+            </form>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-legal">
+            <a href="privacy.html" class="footer-link">PRIVACY POLICY</a>
+            <span class="footer-separator">|</span>
+            <a href="terms.html" class="footer-link">TERMS OF SERVICE</a>
+        </div>
+
+        <p class="footer-copy">© 2025 Tasos Misailidis. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="JS/navbar.js"></script>
+
+<script src="JS/programs.js"></script>
+
+</body>
+</html>

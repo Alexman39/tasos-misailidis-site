@@ -1,0 +1,267 @@
+/* ==========================
+   1. GLOBAL RESET
+   ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+/* ==========================
+   2. HEADER / PROMO BAR
+   ========================== */
+
+.promo-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #252525;
+    color: #f9fafb;
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    border-bottom: 1px solid #1f2937;
+    z-index: 1100; /* above navbar */
+}
+
+/* ==========================
+   3. HERO SECTION
+   ========================== */
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 88px); /* 56px navbar + 32px promo bar = 88px */
+
+    background-image: url("../IMAGES/hero.png");
+    background-size: cover;       /* fills entire screen */
+    background-position: center;  /* keeps main part centered */
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================
+   4. INFO SECTION (TWO LARGE IMAGE BOXES)
+   ========================== */
+
+.info-section {
+    padding: 1.5rem 1rem 2.5rem;
+    background-color: #fff;
+}
+
+/* Grid: mobile = stacked */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+/* Card with background image */
+.info-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;     /* tall for mobile */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Optional: dark overlay for text readability */
+.info-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Inner content overlay */
+.info-content {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1rem;
+}
+
+.info-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.info-text {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #e5e7eb;
+    max-width: 90%;
+}
+
+/* Button */
+.info-button {
+    align-self: flex-start;      /* keep on the left */
+    padding: 0.55rem 1.2rem;
+    background: #38bdf8;
+    color: #0b1120;
+    border: none;
+    border-radius: 0;            /* no rounded corners */
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.info-button:hover {
+    opacity: 0.9;
+}
+
+/* ==========================
+   5. POPULAR PRODUCTS GRID
+   ========================== */
+
+.popular-products {
+    padding: 1.5rem 1rem 2.5rem;
+    background-color: #fff; /* match page background */
+}
+
+/* Section title */
+.popular-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #252525;
+    margin-bottom: 0.75rem;
+}
+
+/* GRID – mobile first: 2 columns */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 0.75rem;
+}
+
+/* Individual product card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image area */
+.product-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Text under image */
+.product-name {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #252525;
+}
+
+.product-price {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #A11116;
+}
+
+/* ==========================
+   6. MEDIA QUERIES
+   ========================== */
+
+/* ≥ 600px (tablets) */
+@media (min-width: 600px) {
+    .popular-products {
+        padding: 2rem 2rem 3rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* ≥ 1024px (desktops) */
+@media (min-width: 1024px) {
+
+    .page-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-inline: 0;
+    }
+
+    .hero {
+        height: 80vh;
+        background-position: center;
+        width: 100%;
+    }
+
+    /* Popular products layout */
+    .popular-products {
+        max-width: 1200px;
+        margin: 0 auto;        /* center the whole section */
+        padding: 3rem 0 3.5rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .product-name,
+    .product-price {
+        font-size: 0.9rem;
+    }
+
+    /* Info section layout */
+    .info-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 0 3.5rem;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .info-card {
+        height: 700px;
+        aspect-ratio: auto;   /* landscape style on desktop */
+    }
+
+    .info-content {
+        padding: 2rem;
+    }
+
+    .info-title {
+        font-size: 1.4rem;
+    }
+
+    .info-text {
+        font-size: 1rem;
+        max-width: 60%;
+    }
+}

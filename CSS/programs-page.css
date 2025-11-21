@@ -1,0 +1,249 @@
+/* ========= PRODUCT PAGE ========= */
+
+.product-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 1.5rem 3rem; /* clear promo + navbar */
+    background-color: #ffffff;
+}
+
+/* Top: cover + info */
+.product-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Image cover */
+.product-cover {
+    width: 100%;
+    aspect-ratio: 4 / 5;              /* tall on mobile */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Main info column */
+.product-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.product-badge {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #6b7280;
+}
+
+.product-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.product-subtitle {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.product-meta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #A11116;
+}
+
+.product-details {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* Add to cart button (placeholder for Stripe later) */
+.product-button-add {
+    margin-top: 0.75rem;
+    align-self: flex-start;
+    padding: 0.7rem 1.6rem;
+    background-color: #111827;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;           /* square button */
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.product-button-add:hover {
+    opacity: 0.9;
+}
+
+.product-note {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.product-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.product-section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.product-section p {
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.product-list {
+    margin: 0.25rem 0 0.5rem 1.25rem;
+    padding: 0;
+}
+
+.product-list li {
+    font-size: 0.95rem;
+    color: #374151;
+    margin-bottom: 0.35rem;
+}
+
+.product-reviews {
+    margin-bottom: 1rem;
+}
+
+.product-reviews-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.product-rating {
+    font-size: 0.9rem;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.product-rating i {
+    color: #fbbf24; /* star color */
+}
+
+/* Reviews grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.review-card {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    padding: 0.9rem 1rem;
+}
+
+.review-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.review-stars {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    color: #fbbf24;
+}
+
+.review-stars i {
+    margin-right: 2px;
+}
+
+.review-text {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+    .product-wrapper {
+        padding: 120px 2rem 3.5rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-wrapper {
+        padding: 140px 2rem 4rem;
+    }
+
+    /* Two-column hero: image left, content right */
+    .product-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+        align-items: center;
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .product-cover {
+        aspect-ratio: 4 / 3;
+    }
+
+    .product-title {
+        font-size: 2rem;
+    }
+
+    .product-subtitle {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .product-meta-row {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 1.25rem;
+    }
+
+    .product-details {
+        font-size: 0.9rem;
+    }
+
+    .product-section {
+        margin-top: 2.5rem;
+    }
+
+    .product-section-title {
+        font-size: 1.3rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}

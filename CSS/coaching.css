@@ -1,0 +1,220 @@
+/* ==========================
+   COACHING PAGE
+   ========================== */
+
+.coaching-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 1.5rem 4rem;
+}
+
+/* HERO */
+.coaching-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.coaching-hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.coaching-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.coaching-subtitle {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.coaching-hero-list {
+    margin: 0.5rem 0 0.75rem 1.2rem;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.coaching-hero-list li {
+    margin-bottom: 0.25rem;
+}
+
+.coaching-cta-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.6rem;
+    background-color: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    border-radius: 0;
+}
+
+.coaching-hero-note {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.coaching-hero-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* GENERIC SECTIONS */
+.coaching-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.coaching-intro {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+/* STEPS */
+.coaching-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.step-card {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 1rem 1.1rem;
+    background-color: #ffffff;
+}
+
+.step-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.step-text {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+/* WHAT YOU GET GRID */
+.coaching-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.coaching-card {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 1rem 1.1rem;
+    background-color: #f9fafb;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+/* LIST */
+.coaching-list {
+    margin-left: 1.2rem;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.coaching-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* CTA SECTION */
+.coaching-cta-section {
+    margin-top: 1rem;
+}
+
+.coaching-cta-inner {
+    border-radius: 14px;
+    padding: 1.8rem 1.4rem;
+    background-color: #111827;
+    color: #f9fafb;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.cta-text {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button-large {
+    margin-top: 0.25rem;
+}
+
+.cta-note {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: #d1d5db;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .coaching-wrapper {
+        padding: 120px 2rem 4rem;
+    }
+
+    .coaching-steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .coaching-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .coaching-hero {
+        flex-direction: row;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .coaching-title {
+        font-size: 2.2rem;
+    }
+
+    .coaching-hero-image {
+        flex: 1.1;
+        aspect-ratio: 4 / 3;
+    }
+
+    .coaching-hero-text {
+        flex: 1.2;
+    }
+}
