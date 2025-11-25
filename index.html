@@ -19,6 +19,13 @@
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/a4df1a361f.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="FAVICON/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="FAVICON/favicon-16x16.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="FAVICON/apple-touch-icon.png">
 </head>
 <body>
 
@@ -158,14 +165,29 @@
                 GET MY ZERO FLUFF, 1 PARAGRAPH WEEKLY NEWSLETTER. FOR FREE!
             </h4>
 
-            <form class="newsletter-form">
+            <form
+                    class="newsletter-form"
+                    action="https://tasosmisailidis.us9.list-manage.com/subscribe/post"
+                    method="post"
+                    target="_blank"
+                    novalidate
+            >
                 <input
                         type="email"
-                        class="newsletter-input"
-                        placeholder="Your Email Address"
-                        required
+                        name="EMAIL"
+                class="newsletter-input"
+                placeholder="Your Email Address"
+                required
                 />
-                <button type="submit" class="newsletter-button">SIGN UP</button>
+
+                <button type="submit" class="newsletter-button">
+                    SIGN UP
+                </button>
+
+                <!-- Spam bot honeypot (Mailchimp uses this) -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_XXXXXXX_YYYYYYY" tabindex="-1" value="">
+                </div>
             </form>
 
             <div class="footer-social">
