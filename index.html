@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -31,82 +31,95 @@
 
 <div class="page-container">
 
-<!-- Promo Bar (full width, like other pages) -->
-<div class="promo-bar">
-    Black Friday Sale – Up to 70% OFF!
+    <!-- Promo Bar -->
+    <div class="promo-bar">
+        Black Friday Εκπτώσεις – Έως και 70% OFF!
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="mobile-nav">
+        <button class="nav-icon nav-toggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a href="index.html" class="nav-logo">
+            <img src="IMAGES/logo.png" alt="Logo">
+        </a>
+
+        <nav class="mobile-menu">
+            <a href="index.html">Αρχική</a>
+            <a href="programs.html">Προγράμματα</a>
+            <a href="coaching.html">Coaching</a>
+            <a href="recipes.html">Συνταγές</a>
+            <a href="flexapil.html">Flexapil</a>
+            <a href="about.html">Σχετικά</a>
+            <a href="contact.html">Επικοινωνία</a>
+        </nav>
+
+        <button class="nav-icon nav-cart" aria-label="View cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+    </header>
+
+    <!-- ============================= -->
+    <!--           MAIN CONTENT        -->
+    <!-- ============================= -->
+
 </div>
 
-<!-- Header / Navbar (full width, like other pages) -->
-<header class="mobile-nav">
-    <button class="nav-icon nav-toggle" aria-label="Toggle menu">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-
-    <a href="index.html" class="nav-logo">
-        <img src="IMAGES/logo.png" alt="Logo">
-    </a>
-
-    <nav class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="programs.html">Programs</a>
-        <a href="coaching.html">Coaching</a>
-        <a href="recipes.html">Recipes</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <button class="nav-icon nav-cart" aria-label="View cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-    </button>
-</header>
-
-<!-- ============================= -->
-<!--           MAIN CONTENT        -->
-<!-- ============================= -->
-
-</div>
-
-    <!-- Hero -->
-    <section class="hero">
-        <!-- Your hero background/image is handled in CSS for .hero -->
-    </section>
+<!-- Hero -->
+<section class="hero">
+    <!-- Background image handled in CSS -->
+</section>
 
 <div class="page-container">
 
     <!-- Products -->
     <section class="popular-products">
-        <h2 class="popular-title">MOST POPULAR</h2>
+        <h2 class="popular-title">ΠΙΟ ΔΗΜΟΦΙΛΗ</h2>
 
         <div class="products-grid">
-            <article class="product-card">
-                <div class="product-image" style="background-image: url('IMAGES/5dayHypertrophy.png');"></div>
-                <h3 class="product-name">5 Day Hypertrophy</h3>
-                <p class="product-price">€29.99</p>
-            </article>
 
-            <article class="product-card">
-                <div class="product-image" style="background-image: url('IMAGES/upperLower.png');"></div>
-                <h3 class="product-name">Upper Lower</h3>
-                <p class="product-price">€39.99</p>
-            </article>
+            <a href="program-5-day-hypertrophy.html">
+                <article class="product-card">
+                    <div class="product-image" style="background-image: url('IMAGES/5dayHypertrophy.png');"></div>
+                    <h3 class="product-name">5 Ημέρες Υπερτροφία</h3>
+                    <p class="product-price">€29.99</p>
+                </article>
+            </a>
 
-            <article class="product-card">
-                <div class="product-image" style="background-image: url('IMAGES/legPower.png');"></div>
-                <h3 class="product-name">Leg Power</h3>
-                <p class="product-price">€19.99</p>
-            </article>
+            <a href="program-upper-lower.html">
+                <article class="product-card">
+                    <div class="product-image" style="background-image: url('IMAGES/upperLower.png');"></div>
+                    <h3 class="product-name">Upper – Lower</h3>
+                    <p class="product-price">€39.99</p>
+                </article>
+            </a>
 
-            <article class="product-card">
-                <div class="product-image" style="background-image: url('IMAGES/gluteGoddess.png');"></div>
-                <h3 class="product-name">Glute Goddess</h3>
-                <p class="product-price">€24.99</p>
-            </article>
+            <a href="program-leg-power.html">
+                <article class="product-card">
+                    <div class="product-image" style="background-image: url('IMAGES/legPower.png');"></div>
+                    <h3 class="product-name">Leg Power</h3>
+                    <p class="product-price">€19.99</p>
+                </article>
+            </a>
 
-            <article class="product-card">
-                <div class="product-image" style="background-image: url('IMAGES/leanSculpt.png');"></div>
-                <h3 class="product-name">Lean & Sculpt</h3>
-                <p class="product-price">€59.99</p>
-            </article>
+            <a href="program-glute-goddess.html">
+                <article class="product-card">
+                    <div class="product-image" style="background-image: url('IMAGES/gluteGoddess.png');"></div>
+                    <h3 class="product-name">Glute Goddess</h3>
+                    <p class="product-price">€24.99</p>
+                </article>
+            </a>
+
+            <a href="program-lean-toned.html">
+                <article class="product-card">
+                    <div class="product-image" style="background-image: url('IMAGES/leanSculpt.png');"></div>
+                    <h3 class="product-name">Lean & Sculpt</h3>
+                    <p class="product-price">€59.99</p>
+                </article>
+            </a>
+
         </div>
     </section>
 
@@ -116,101 +129,101 @@
 
             <article class="info-card" style="background-image: url('IMAGES/image1.jpg');">
                 <div class="info-content">
-                    <h3 class="info-title">Personal Coaching</h3>
+                    <h3 class="info-title">Προσωπικό Coaching</h3>
                     <p class="info-text">
-                        Custom training & nutrition plans made specifically for you.
+                        Εξατομικευμένα προγράμματα προπόνησης & διατροφής ειδικά για εσένα.
                     </p>
-                    <button class="info-button">Learn More</button>
+                    <button class="info-button">Μάθε Περισσότερα</button>
                 </div>
             </article>
 
             <article class="info-card" style="background-image: url('IMAGES/image2.jpg');">
                 <div class="info-content">
-                    <h3 class="info-title">Digital Programs</h3>
+                    <h3 class="info-title">Ψηφιακά Προγράμματα</h3>
                     <p class="info-text">
-                        Proven, step-by-step PDF guides for fat loss, muscle gain, and more.
+                        Αποδεδειγμένοι, βήμα-βήμα οδηγοί PDF για γράμμωση, μυϊκή ανάπτυξη και πολλά περισσότερα.
                     </p>
-                    <button class="info-button">Learn More</button>
+                    <button class="info-button">Μάθε Περισσότερα</button>
                 </div>
             </article>
 
         </div>
     </section>
 
-</main>
+    </main>
 
-<!-- ============================= -->
-<!--              FOOTER           -->
-<!-- ============================= -->
+    <!-- ============================= -->
+    <!--              FOOTER           -->
+    <!-- ============================= -->
 
-<footer class="site-footer">
-    <div class="footer-top">
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h4 class="footer-heading">PROGRAMS</h4>
-                <a href="programs.html" class="footer-link">Training Programs</a>
-                <a href="coaching.html" class="footer-link">Online Coaching</a>
-            </div>
-
-            <div class="footer-column">
-                <h4 class="footer-heading">SPONSORS</h4>
-                <a href="#" class="footer-link">Flexapil</a>
-                <a href="#" class="footer-link">Underarmour</a>
-                <a href="#" class="footer-link">Firtech</a>
-            </div>
-        </div>
-
-        <div class="footer-newsletter">
-            <h4 class="footer-heading">
-                GET MY ZERO FLUFF, 1 PARAGRAPH WEEKLY NEWSLETTER. FOR FREE!
-            </h4>
-
-            <form
-                    class="newsletter-form"
-                    action="https://tasosmisailidis.us9.list-manage.com/subscribe/post"
-                    method="post"
-                    target="_blank"
-                    novalidate
-            >
-                <input
-                        type="email"
-                        name="EMAIL"
-                class="newsletter-input"
-                placeholder="Your Email Address"
-                required
-                />
-
-                <button type="submit" class="newsletter-button">
-                    SIGN UP
-                </button>
-
-                <!-- Spam bot honeypot (Mailchimp uses this) -->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="b_XXXXXXX_YYYYYYY" tabindex="-1" value="">
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4 class="footer-heading">ΠΡΟΓΡΑΜΜΑΤΑ</h4>
+                    <a href="programs.html" class="footer-link">Προγράμματα Προπόνησης</a>
+                    <a href="coaching.html" class="footer-link">Online Coaching</a>
                 </div>
-            </form>
 
-            <div class="footer-social">
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <div class="footer-column">
+                    <h4 class="footer-heading">ΧΟΡΗΓΟΙ</h4>
+                    <a href="#" class="footer-link">Flexapil</a>
+                    <a href="#" class="footer-link">Underarmour</a>
+                    <a href="#" class="footer-link">Firtech</a>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-heading">
+                    ΛΑΒΕ ΤΟ ΜΗΝΙΑΙΟ NEWSLETTER ΜΟΥ, 1 ΠΑΡΑΓΡΑΦΟ ΧΩΡΙΣ ΦΛΟΥΦΛΑ. ΔΩΡΕΑΝ!
+                </h4>
+
+                <form
+                        class="newsletter-form"
+                        action="https://tasosmisailidis.us9.list-manage.com/subscribe/post"
+                        method="post"
+                        target="_blank"
+                        novalidate
+                >
+                    <input
+                            type="email"
+                            name="EMAIL"
+                            class="newsletter-input"
+                            placeholder="Το Email σου"
+                            required
+                    />
+
+                    <button type="submit" class="newsletter-button">
+                        ΕΓΓΡΑΦΗ
+                    </button>
+
+                    <!-- Spam bot honeypot -->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_XXXXXXX_YYYYYYY" tabindex="-1" value="">
+                    </div>
+                </form>
+
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <div class="footer-legal">
-            <a href="privacy.html" class="footer-link">PRIVACY POLICY</a>
-            <span class="footer-separator">|</span>
-            <a href="terms.html" class="footer-link">TERMS OF SERVICE</a>
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <a href="privacy.html" class="footer-link">ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</a>
+                <span class="footer-separator">|</span>
+                <a href="terms.html" class="footer-link">ΟΡΟΙ ΧΡΗΣΗΣ</a>
+            </div>
+
+            <p class="footer-copy">
+                © 2025 Tasos Misailidis. Με επιφύλαξη παντός δικαιώματος.
+            </p>
         </div>
-
-        <p class="footer-copy">
-            © 2025 Tasos Misailidis. All Rights Reserved.
-        </p>
-    </div>
-</footer>
+    </footer>
 
 </div>
 

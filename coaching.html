@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -33,9 +33,11 @@
 </head>
 <body>
 
+<div class="page-container">
+
 <!-- Promo Bar -->
 <div class="promo-bar">
-    Black Friday Sale – Up to 70% OFF!
+    Black Friday Εκπτώσεις – Έως 70% OFF!
 </div>
 
 <!-- Navbar -->
@@ -49,12 +51,13 @@
     </a>
 
     <nav class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="programs.html">Programs</a>
+        <a href="index.html">Αρχική</a>
+        <a href="programs.html">Προγράμματα</a>
         <a href="coaching.html">Coaching</a>
-        <a href="recipes.html">Recipes</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="recipes.html">Συνταγές</a>
+        <a href="flexapil.html">Flexapil</a>
+        <a href="about.html">Σχετικά</a>
+        <a href="contact.html">Επικοινωνία</a>
     </nav>
 
     <button class="nav-icon nav-cart" aria-label="View cart">
@@ -71,99 +74,198 @@
     <!-- Hero -->
     <section class="coaching-hero">
         <div class="coaching-hero-text">
-            <h1 class="coaching-title">Online Coaching with Tasos Misailidis</h1>
+            <p class="coaching-eyebrow">Online Coaching</p>
+
+            <h1 class="coaching-title">
+                Μεταμόρφωσε το σώμα σου με
+                <span class="highlight-name">τον Tasos Misailidis</span>
+            </h1>
+
             <p class="coaching-subtitle">
-                Stop guessing your training and nutrition. Get a structured, fully personalized plan
-                and direct guidance from one of the most experienced coaches in Greek bodybuilding.
+                Σταμάτα να μαντεύεις την προπόνηση και τη διατροφή σου. Πάρε ένα δομημένο, πλήρως εξατομικευμένο πλάνο
+                και άμεση καθοδήγηση από έναν από τους πιο έμπειρους coaches στο ελληνικό bodybuilding.
             </p>
 
             <ul class="coaching-hero-list">
-                <li>Custom training plan based on your goal, level & schedule</li>
-                <li>Personalized nutrition guidance and adjustments</li>
-                <li>Weekly check-ins & feedback directly with Tasos</li>
+                <li>Εξατομικευμένο split προπόνησης & πρόοδος βασισμένη στη ζωή και το πρόγραμμά σου</li>
+                <li>Προσωποποιημένο διατροφικό πλάνο προσαρμοσμένο στο σώμα και τον στόχο σου</li>
+                <li>Εβδομαδιαία check-ins & feedback απευθείας με τον Tasos</li>
             </ul>
 
-            <a href="mailto:support@tasosmisailidis.com?subject=Online Coaching Application"
-               class="coaching-cta-button">
-                APPLY FOR ONLINE COACHING
-            </a>
+            <div class="coaching-hero-actions">
+                <a href="#coaching-plans" class="coaching-cta-button primary">
+                    ΔΕΣ ΤΑ COACHING ΠΛΑΝΑ
+                </a>
+
+                <a href="mailto:support@tasosmisailidis.com?subject=Online Coaching Application"
+                   class="coaching-cta-button ghost">
+                    ΚΑΝΕ ΑΙΤΗΣΗ ΜΕ EMAIL
+                </a>
+            </div>
 
             <p class="coaching-hero-note">
-                Γράψε μας στόχους, εμπειρία και διαθέσιμες ημέρες προπόνησης και θα σε
-                <strong>επικοινωνήσουμε εμείς</strong> με όλες τις λεπτομέρειες.
+                Γράψε μας στόχους, εμπειρία και διαθέσιμες ημέρες προπόνησης και
+                <strong>εμείς θα επικοινωνήσουμε μαζί σου</strong> με όλες τις λεπτομέρειες.
             </p>
         </div>
 
         <div class="coaching-hero-image"
-             style="background-image: url('IMAGES/tasos-coaching-hero.jpg');">
+             style="background-image: url('IMAGES/image2.jpg');">
+        </div>
+    </section>
+
+    <!-- Highlight bar -->
+    <section class="coaching-highlight-bar">
+        <div class="highlight-pill">
+            <span>🏆</span> Αθλητής Natural Bodybuilding
+        </div>
+        <div class="highlight-pill">
+            <span>🧬</span> Πλήρως Εξατομικευμένα Πλάνα
+        </div>
+        <div class="highlight-pill">
+            <span>📅</span> Εβδομαδιαία Check-ins
+        </div>
+        <div class="highlight-pill">
+            <span>⚡</span> Περιορισμένες 1:1 Θέσεις
+        </div>
+    </section>
+
+    <!-- Coaching plans -->
+    <section id="coaching-plans" class="coaching-section coaching-plans">
+        <div class="section-header">
+            <h2 class="section-title">Επίλεξε το online coaching πλάνο σου</h2>
+            <p class="section-subtitle">
+                Δύο επιλογές. Ίδιο επίπεδο προσοχής. Διάλεξε αυτό που ταιριάζει στις ανάγκες σου.
+            </p>
+        </div>
+
+        <div class="plans-grid">
+
+            <!-- Diet Coaching -->
+            <article class="plan-card">
+                <div class="plan-card-header">
+                    <h3 class="plan-title">Diet Coaching</h3>
+                    <p class="plan-price">100€ <span>/ μήνα</span></p>
+                </div>
+
+                <ul class="plan-features">
+                    <li>Πλήρες διατροφικό πλάνο προσαρμοσμένο στα στοιχεία & τον στόχο σου</li>
+                    <li>Θερμίδες, macros & πρακτικά παραδείγματα γευμάτων</li>
+                    <li>Εβδομαδιαία check-ins & προσαρμογές ανάλογα με την πρόοδο</li>
+                    <li>Υποστήριξη μέσω Email / Messenger για απορίες</li>
+                    <li>Ιδανικό αν ήδη ακολουθείς δικό σου πρόγραμμα προπόνησης</li>
+                </ul>
+
+                <a href="mailto:support@tasosmisailidis.com?subject=Diet Coaching Application (100€)"
+                   class="plan-cta-button">
+                    ΚΑΝΕ ΑΙΤΗΣΗ ΓΙΑ DIET COACHING
+                </a>
+            </article>
+
+            <!-- Diet + Training Coaching -->
+            <article class="plan-card plan-card-featured">
+                <div class="plan-badge">Most Popular</div>
+
+                <div class="plan-card-header">
+                    <h3 class="plan-title">Diet + Training Coaching</h3>
+                    <p class="plan-price">130€ <span>/ μήνα</span></p>
+                </div>
+
+                <ul class="plan-features">
+                    <li>Ό,τι περιλαμβάνεται στο Diet Coaching</li>
+                    <li>Εξατομικευμένο training split & επιλογή ασκήσεων</li>
+                    <li>Πλάνο προόδου, deloads & προσαρμογές στον χρόνο</li>
+                    <li>Feedback στην τεχνική μέσω βίντεο/φωτογραφιών από τα check-ins</li>
+                    <li>Η καλύτερη επιλογή για πλήρη μεταμόρφωση</li>
+                </ul>
+
+                <a href="mailto:support@tasosmisailidis.com?subject=Diet + Training Coaching Application (130€)"
+                   class="plan-cta-button primary">
+                    ΚΑΝΕ ΑΙΤΗΣΗ ΓΙΑ DIET + TRAINING
+                </a>
+            </article>
+
         </div>
     </section>
 
     <!-- How coaching works -->
-    <section class="coaching-section">
-        <h2 class="section-title">How Online Coaching Works</h2>
-
-        <div class="coaching-steps">
-            <article class="step-card">
-                <h3 class="step-title">1. Assessment</h3>
-                <p class="step-text">
-                    You share your training history, lifestyle, current condition, injuries and goal
-                    (fat loss, muscle gain, recomposition, competition prep).
-                </p>
-            </article>
-
-            <article class="step-card">
-                <h3 class="step-title">2. Custom Plan</h3>
-                <p class="step-text">
-                    Tasos designs a personalized training plan and nutrition guidelines matched to
-                    your experience, equipment and available days per week.
-                </p>
-            </article>
-
-            <article class="step-card">
-                <h3 class="step-title">3. Check-ins & Adjustments</h3>
-                <p class="step-text">
-                    You send weekly updates, photos and feedback. Based on your progress, the plan is
-                    adjusted so you keep moving forward.
-                </p>
-            </article>
+    <section class="coaching-section coaching-steps-section">
+        <div class="section-header">
+            <h2 class="section-title">Πώς λειτουργεί το online coaching</h2>
+            <p class="section-subtitle">
+                Μια ξεκάθαρη, απλή διαδικασία ώστε να ξέρεις πάντα ποιο είναι το επόμενο βήμα.
+            </p>
         </div>
+
+        <ol class="coaching-steps">
+            <li class="step-card">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Αξιολόγηση</h3>
+                <p class="step-text">
+                    Μοιράζεσαι το ιστορικό προπόνησης, τον τρόπο ζωής σου, την τωρινή σου κατάσταση, τυχόν τραυματισμούς
+                    και τον βασικό σου στόχο (γράμμωση, μυϊκή ανάπτυξη, recomposition, προετοιμασία αγώνα).
+                </p>
+            </li>
+
+            <li class="step-card">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Εξατομικευμένο Πλάνο</h3>
+                <p class="step-text">
+                    Ο Tasos σχεδιάζει ένα προσωπικό πρόγραμμα προπόνησης και οδηγίες διατροφής
+                    προσαρμοσμένες στην εμπειρία σου, τον εξοπλισμό και τις διαθέσιμες ημέρες προπόνησης.
+                </p>
+            </li>
+
+            <li class="step-card">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Check-ins & Προσαρμογές</h3>
+                <p class="step-text">
+                    Στέλνεις εβδομαδιαίες ενημερώσεις, φωτογραφίες και feedback. Με βάση την πρόοδο σου,
+                    το πλάνο προσαρμόζεται ώστε να συνεχίζεις να προχωράς κάθε εβδομάδα.
+                </p>
+            </li>
+        </ol>
     </section>
 
     <!-- What you get -->
     <section class="coaching-section">
-        <h2 class="section-title">What You Get with Online Coaching</h2>
+        <div class="section-header">
+            <h2 class="section-title">Τι κερδίζεις με το online coaching</h2>
+            <p class="section-subtitle">
+                Πολύ περισσότερα από ένα PDF. Παίρνεις πραγματικό coach, πραγματικό πλάνο και πραγματική υπευθυνότητα.
+            </p>
+        </div>
 
         <div class="coaching-grid">
             <article class="coaching-card">
-                <h3 class="card-title">Training Tailored to You</h3>
+                <h3 class="card-title">Προπόνηση σχεδιασμένη πάνω σου</h3>
                 <p class="card-text">
-                    No more random workouts. Your plan is built around your body, your gym,
-                    your weak points and your schedule.
+                    Τέλος στα τυχαία workouts. Το πρόγραμμά σου χτίζεται πάνω στο σώμα σου, το γυμναστήριο που έχεις,
+                    τα αδύναμα σημεία σου και το πρόγραμμά σου.
                 </p>
             </article>
 
             <article class="coaching-card">
-                <h3 class="card-title">Nutrition Guidance</h3>
+                <h3 class="card-title">Διατροφή που ταιριάζει στην πραγματική ζωή</h3>
                 <p class="card-text">
-                    Clear calorie and macro structure with practical food suggestions so you
-                    can actually follow the plan in real life.
+                    Ξεκάθαρη δομή θερμίδων και macros με πρακτικές προτάσεις γευμάτων, ώστε να μπορείς
+                    να ακολουθήσεις το πλάνο μακροπρόθεσμα.
                 </p>
             </article>
 
             <article class="coaching-card">
-                <h3 class="card-title">Accountability</h3>
+                <h3 class="card-title">Υπευθυνότητα & υποστήριξη</h3>
                 <p class="card-text">
-                    Regular check-ins keep you on track. You’re not doing this alone—you have
-                    a coach reviewing your progress and decisions.
+                    Τα τακτικά check-ins σε κρατούν στον δρόμο. Δεν είσαι μόνος σου – έχεις
+                    coach που βλέπει την πρόοδό σου και σε καθοδηγεί.
                 </p>
             </article>
 
             <article class="coaching-card">
-                <h3 class="card-title">Real Coaching, Not Just a PDF</h3>
+                <h3 class="card-title">Πραγματικό coaching, όχι απλά ένα αρχείο</h3>
                 <p class="card-text">
-                    This is not a one-time download. It’s an ongoing process where the plan
-                    evolves with your progress, performance and life.
+                    Δεν είναι ένα one-off κατέβασμα. Είναι μια συνεχόμενη διαδικασία όπου το πλάνο
+                    εξελίσσεται μαζί με την πρόοδο, την απόδοση και τη ζωή σου.
                 </p>
             </article>
         </div>
@@ -171,36 +273,39 @@
 
     <!-- Who it's for -->
     <section class="coaching-section">
-        <h2 class="section-title">Is Online Coaching Right for You?</h2>
+        <div class="section-header">
+            <h2 class="section-title">Είναι το online coaching για σένα;</h2>
+        </div>
+
         <p class="coaching-intro">
-            Online coaching with Tasos is ideal if you:
+            Το online coaching με τον Tasos είναι ιδανικό αν:
         </p>
 
         <ul class="coaching-list">
-            <li>Want a clear plan and are ready to commit for at least a few months</li>
-            <li>Are tired of guessing and want expert eyes on your training & physique</li>
-            <li>Are beginner, intermediate or advanced – but serious about progress</li>
-            <li>Are willing to communicate honestly about your lifestyle and adherence</li>
+            <li>Θέλεις ένα ξεκάθαρο πλάνο και είσαι έτοιμος/η να δεσμευτείς για τουλάχιστον μερικούς μήνες</li>
+            <li>Έχεις κουραστεί να μαντεύεις και θέλεις έμπειρο μάτι πάνω στην προπόνηση & το σώμα σου</li>
+            <li>Είσαι αρχάριος, μέσος ή προχωρημένος – αλλά σοβαρός/ή για πρόοδο</li>
+            <li>Είσαι πρόθυμος/η να επικοινωνείς ειλικρινά για τον τρόπο ζωής σου και την τήρηση του πλάνου</li>
         </ul>
     </section>
 
-    <!-- CTA stripe -->
+    <!-- Final CTA stripe -->
     <section class="coaching-cta-section">
         <div class="coaching-cta-inner">
-            <h2 class="cta-title">Ready to Take Your Training Seriously?</h2>
+            <h2 class="cta-title">Έτοιμος/η να πάρεις την προπόνησή σου στα σοβαρά;</h2>
             <p class="cta-text">
-                If you’re done spinning your wheels and want structured, professional guidance,
-                apply for online coaching with Tasos today.
+                Αν έχεις βαρεθεί να γυρίζεις σε κύκλους και θέλεις δομημένη, επαγγελματική καθοδήγηση,
+                κάνε αίτηση για online coaching με τον Tasos σήμερα.
             </p>
 
             <a href="mailto:support@tasosmisailidis.com?subject=Online Coaching Application"
                class="coaching-cta-button cta-button-large">
-                EMAIL US TO APPLY
+                ΣΤΕΙΛΕ ΜΑΣ EMAIL ΓΙΑ ΑΙΤΗΣΗ
             </a>
 
             <p class="cta-note">
-                Include your age, height, weight, current photos (optional), training experience
-                and your main goal. We will get back to you with next steps.
+                Συμπερίλαβε ηλικία, ύψος, βάρος, πρόσφατες φωτογραφίες (προαιρετικά), εμπειρία προπόνησης
+                και τον βασικό σου στόχο. Θα επικοινωνήσουμε μαζί σου με τα επόμενα βήματα.
             </p>
         </div>
     </section>
@@ -212,13 +317,13 @@
     <div class="footer-top">
         <div class="footer-columns">
             <div class="footer-column">
-                <h4 class="footer-heading">PROGRAMS</h4>
-                <a href="programs.html" class="footer-link">Training Programs</a>
+                <h4 class="footer-heading">ΠΡΟΓΡΑΜΜΑΤΑ</h4>
+                <a href="programs.html" class="footer-link">Προγράμματα Προπόνησης</a>
                 <a href="coaching.html" class="footer-link">Online Coaching</a>
             </div>
 
             <div class="footer-column">
-                <h4 class="footer-heading">SPONSORS</h4>
+                <h4 class="footer-heading">ΧΟΡΗΓΟΙ</h4>
                 <a href="#" class="footer-link">Flexapil</a>
                 <a href="#" class="footer-link">Underarmour</a>
                 <a href="#" class="footer-link">Firtech</a>
@@ -227,12 +332,12 @@
 
         <div class="footer-newsletter">
             <h4 class="footer-heading">
-                GET MY ZERO FLUFF, 1 PARAGRAPH WEEKLY NEWSLETTER. FOR FREE!
+                ΛΑΒΕ ΤΟ ΜΗΝΙΑΙΟ NEWSLETTER ΜΟΥ, 1 ΠΑΡΑΓΡΑΦΟ ΧΩΡΙΣ ΦΛΟΥΦΛΑ. ΔΩΡΕΑΝ!
             </h4>
 
             <form class="newsletter-form">
-                <input type="email" class="newsletter-input" placeholder="Your Email Address" required />
-                <button type="submit" class="newsletter-button">SIGN UP</button>
+                <input type="email" class="newsletter-input" placeholder="Το Email σου" required />
+                <button type="submit" class="newsletter-button">ΕΓΓΡΑΦΗ</button>
             </form>
 
             <div class="footer-social">
@@ -246,13 +351,15 @@
 
     <div class="footer-bottom">
         <div class="footer-legal">
-            <a href="privacy.html" class="footer-link">PRIVACY POLICY</a>
+            <a href="privacy.html" class="footer-link">ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ</a>
             <span class="footer-separator">|</span>
-            <a href="terms.html" class="footer-link">TERMS OF SERVICE</a>
+            <a href="terms.html" class="footer-link">ΟΡΟΙ ΧΡΗΣΗΣ</a>
         </div>
-        <p class="footer-copy">© 2025 Tasos Misailidis. All Rights Reserved.</p>
+        <p class="footer-copy">© 2025 Tasos Misailidis. Με επιφύλαξη παντός δικαιώματος.</p>
     </div>
 </footer>
+
+</div>
 
 <script src="JS/navbar.js"></script>
 

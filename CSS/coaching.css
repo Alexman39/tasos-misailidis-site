@@ -1,105 +1,393 @@
 /* ==========================
-   COACHING PAGE
+   ONLINE COACHING PAGE
    ========================== */
 
+:root {
+    --coaching-accent: #0AEEF1;
+    --coaching-accent-soft: #E5FEFF;
+    --coaching-bg-soft: #f9fafb;
+    --coaching-border: #e5e7eb;
+    --coaching-text-main: #0f172a;
+    --coaching-text-muted: #4b5563;
+}
+
+/* WRAPPER */
 .coaching-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 120px 1.5rem 4rem;
+    color: var(--coaching-text-main);
 }
 
-/* HERO */
+/* ==========================
+   HERO
+   ========================== */
+
 .coaching-hero {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     margin-bottom: 3rem;
+    align-items: center;
 }
 
 .coaching-hero-text {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.85rem;
+}
+
+.coaching-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    color: var(--coaching-accent);
 }
 
 .coaching-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    line-height: 1.1;
     font-weight: 700;
 }
 
+.highlight-name {
+    color: var(--coaching-accent);
+}
+
 .coaching-subtitle {
-    font-size: 0.95rem;
-    color: #4b5563;
-    line-height: 1.6;
+    font-size: 0.98rem;
+    color: var(--coaching-text-muted);
+    line-height: 1.7;
+    max-width: 34rem;
 }
 
 .coaching-hero-list {
-    margin: 0.5rem 0 0.75rem 1.2rem;
-    font-size: 0.95rem;
+    margin: 0.25rem 0 0.75rem 1.2rem;
+    font-size: 0.96rem;
     color: #374151;
 }
 
 .coaching-hero-list li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
 }
 
-.coaching-cta-button {
-    display: inline-block;
+.coaching-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-top: 0.5rem;
-    padding: 0.75rem 1.6rem;
+}
+
+/* CTA BUTTONS (hero + CTA stripe reuse) */
+.coaching-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.8rem;
+    border-radius: 999px;
+    border: 1px solid #111827;
     background-color: #111827;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 600;
-    letter-spacing: 0.08em;
-    border-radius: 0;
+    letter-spacing: 0.12em;
+    transition: transform 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+    cursor: pointer;
 }
 
+.coaching-cta-button.primary {
+    background-color: var(--coaching-accent);
+    border-color: var(--coaching-accent);
+    color: #111827;
+    box-shadow: 0 12px 20px rgba(10, 238, 241, 0.30)
+}
+
+.coaching-cta-button.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 20px rgba(10, 238, 241, 0.30)
+}
+
+.coaching-cta-button.ghost {
+    background-color: #ffffff;
+    border-color: var(--coaching-border);
+    color: #111827;
+}
+
+.coaching-cta-button.ghost:hover {
+    background-color: #f3f4f6;
+}
+
+/* Larger version used in final CTA */
+.cta-button-large {
+    padding-inline: 2.4rem;
+    margin-top: 0.25rem;
+}
+
+/* Hero note */
 .coaching-hero-note {
     margin-top: 0.75rem;
-    font-size: 0.85rem;
+    font-size: 0.86rem;
     color: #6b7280;
+    max-width: 32rem;
 }
 
+/* Hero image */
 .coaching-hero-image {
     width: 100%;
     aspect-ratio: 4 / 3;
-    border-radius: 12px;
+    border-radius: 16px;
     background-size: cover;
     background-position: center;
+    background-color: #020617;
+    position: relative;
+    overflow: hidden;
 }
 
-/* GENERIC SECTIONS */
-.coaching-section {
+/* slight gradient overlay for contrast if image is bright */
+.coaching-hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top right, rgba(15,23,42,0.45), transparent 55%);
+}
+
+/* ==========================
+   HIGHLIGHT BAR
+   ========================== */
+
+.coaching-highlight-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-bottom: 3rem;
+    padding: 0.9rem 1rem;
+    border-radius: 25px;
+    background: linear-gradient(90deg, rgba(15,23,42,0.95), #020617);
+    color: #e5e7eb;
+    font-size: 0.85rem;
+}
+
+.highlight-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(15,23,42,0.7);
+    border: 1px solid rgba(55,65,81,0.7);
+    white-space: nowrap;
+    color: #fff;
+}
+
+.highlight-pill span {
+    font-size: 0.95rem;
+}
+
+/* ==========================
+   GENERIC SECTIONS
+   ========================== */
+
+.coaching-section {
+    margin-bottom: 3.25rem;
+}
+
+.section-header {
+    margin-bottom: 1.8rem;
+    text-align: left;
 }
 
 .section-title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    color: var(--coaching-text-muted);
+}
+
+/* Intro text above lists */
+.coaching-intro {
+    font-size: 0.95rem;
+    color: var(--coaching-text-muted);
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================
+   PLANS
+   ========================== */
+
+.coaching-plans {
+    /* section itself already has margin from .coaching-section */
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.plan-card {
+    border-radius: 18px;
+    border: 1px solid var(--coaching-border);
+    padding: 1.6rem 1.5rem 1.4rem;
+    background-color: #ffffff;
+    box-shadow: 0 16px 30px rgba(15,23,42,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan-card-header {
     margin-bottom: 1rem;
 }
 
-.coaching-intro {
-    font-size: 0.95rem;
-    color: #4b5563;
-    margin-bottom: 0.75rem;
+.plan-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
 }
 
-/* STEPS */
+.plan-price {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--coaching-text-main);
+}
+
+.plan-price span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--coaching-text-muted);
+    margin-left: 0.35rem;
+}
+
+/* Plan feature list */
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 1.4rem;
+    font-size: 0.93rem;
+    color: var(--coaching-text-muted);
+}
+
+.plan-features li {
+    display: flex;
+    gap: 0.45rem;
+    align-items: flex-start;
+    margin-bottom: 0.45rem;
+}
+
+.plan-features li::before {
+    content: "•";
+    color: var(--coaching-accent);
+    font-size: 1rem;
+    margin-top: 0.15rem;
+}
+
+/* Plan CTA */
+.plan-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.6rem;
+    border-radius: 999px;
+    border: 1px solid #111827;
+    background-color: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: background-color 0.16s ease, border-color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.plan-cta-button:hover {
+    background-color: #020617;
+    border-color: #020617;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(15,23,42,0.15);
+}
+
+/* primary variation for featured plan */
+.plan-cta-button.primary {
+    background-color: var(--coaching-accent);
+    border-color: var(--coaching-accent);
+    color: #111827;
+    box-shadow: 0 12px 20px rgba(10, 238, 241, 0.30);
+}
+
+.plan-cta-button.primary:hover {
+    background-color: #0AEEF1;
+    border-color: #0AEEF1;
+}
+
+
+/* Featured card */
+.plan-card-featured {
+    position: relative;
+    border-color: var(--coaching-accent);
+    background: linear-gradient(135deg, #ffffff, #fff7ed);
+    box-shadow: 0 12px 20px rgba(10, 238, 241, 0.30);
+}
+
+.plan-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1.1rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+/* ==========================
+   STEPS
+   ========================== */
+
+.coaching-steps-section {
+    /* just uses generic section spacing */
+}
+
 .coaching-steps {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .step-card {
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    padding: 1rem 1.1rem;
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid var(--coaching-border);
+    padding: 1rem 1.1rem 1rem 3rem;
     background-color: #ffffff;
+}
+
+.step-number {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 999px;
+    background-color: var(--coaching-accent-soft);
+    border: 1px solid var(--coaching-accent);
+    color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
 .step-title {
@@ -110,10 +398,13 @@
 
 .step-text {
     font-size: 0.9rem;
-    color: #4b5563;
+    color: var(--coaching-text-muted);
 }
 
-/* WHAT YOU GET GRID */
+/* ==========================
+   WHAT YOU GET GRID
+   ========================== */
+
 .coaching-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -121,10 +412,10 @@
 }
 
 .coaching-card {
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    padding: 1rem 1.1rem;
-    background-color: #f9fafb;
+    border-radius: 16px;
+    border: 1px solid var(--coaching-border);
+    padding: 1.1rem 1.2rem;
+    background-color: var(--coaching-bg-soft);
 }
 
 .card-title {
@@ -135,10 +426,13 @@
 
 .card-text {
     font-size: 0.9rem;
-    color: #4b5563;
+    color: var(--coaching-text-muted);
 }
 
-/* LIST */
+/* ==========================
+   “IS IT FOR YOU” LIST
+   ========================== */
+
 .coaching-list {
     margin-left: 1.2rem;
     font-size: 0.95rem;
@@ -149,21 +443,24 @@
     margin-bottom: 0.3rem;
 }
 
-/* CTA SECTION */
+/* ==========================
+   FINAL CTA STRIPE
+   ========================== */
+
 .coaching-cta-section {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .coaching-cta-inner {
-    border-radius: 14px;
-    padding: 1.8rem 1.4rem;
-    background-color: #111827;
+    border-radius: 18px;
+    padding: 2rem 1.6rem;
+    background: #0AEEF1;
     color: #f9fafb;
     text-align: center;
 }
 
 .cta-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
 }
@@ -171,22 +468,32 @@
 .cta-text {
     font-size: 0.95rem;
     margin-bottom: 1rem;
-}
-
-.cta-button-large {
-    margin-top: 0.25rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-note {
-    margin-top: 0.8rem;
+    margin-top: 0.9rem;
     font-size: 0.85rem;
-    color: #d1d5db;
+    color: #000000;
 }
 
-/* RESPONSIVE */
+/* ==========================
+   RESPONSIVE
+   ========================== */
+
 @media (min-width: 768px) {
     .coaching-wrapper {
         padding: 120px 2rem 4rem;
+    }
+
+    .coaching-highlight-bar {
+        justify-content: center;
+    }
+
+    .plans-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .coaching-steps {
@@ -196,25 +503,23 @@
     .coaching-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
 }
 
 @media (min-width: 1024px) {
     .coaching-hero {
-        flex-direction: row;
-        align-items: center;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
         gap: 2.5rem;
     }
 
     .coaching-title {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
 
     .coaching-hero-image {
-        flex: 1.1;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 3 / 4;
+        max-width: 420px;
+        justify-self: center;
     }
 
-    .coaching-hero-text {
-        flex: 1.2;
-    }
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexapil Gym | Official Page</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Optional: fallback message */
+        .no-iframe {
+            display: none;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        iframe[hidden] + .no-iframe {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<iframe
+        src="https://flexapil.gr/"
+        class="iframe-container"
+        frameborder="0"
+        allowfullscreen>
+</iframe>
+
+<div class="no-iframe">
+    <h2>Unable to load Flexapil.</h2>
+    <p><a href="https://flexapil.gr/" target="_blank">Click here to open the site in a new tab.</a></p>
+</div>
+
+</body>
+</html>
